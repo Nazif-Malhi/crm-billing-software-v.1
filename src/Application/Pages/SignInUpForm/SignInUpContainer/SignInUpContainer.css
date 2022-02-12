@@ -1,0 +1,22 @@
+.logInMainContainer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    background-color: #CCD5FF;
+    
+}
+
+.logInMainContainer .logInConatiner{
+    width: 500px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    border-radius: 5px;
+    background-color: #058ED9;
+    position:relative; 
+    margin-bottom:45px;
+}

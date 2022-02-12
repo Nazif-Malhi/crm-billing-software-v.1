@@ -1,0 +1,77 @@
+.limitbar_con{
+    background-color: rgb(177, 177, 177);
+    border-radius: 5px;
+}
+.limitbar_con .limitbar_row {
+margin-top: 40px;
+
+}
+
+.limitbar_con .limitbar_con.limitbar_row h6{
+    margin-top: 20px;
+}
+
+
+
+
+
+/* .buttonContainers{
+    width: 500px;
+    height: 30px;
+    background-color: rgb(82, 82, 82);
+    border-radius: 5px;
+    color: white;
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: center;
+    
+    
+}
+
+.buttonContainers h4{
+    margin-top: 7px;
+    padding-right: 20px;
+    
+}
+.today{
+    /* margin-top: 7px;
+    margin-left: 5px; */
+    /* padding-top: 4px;
+    padding-left: 20px;
+    
+}
+
+.today:hover{
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.Last-7-Days{
+    padding-top: 4px;
+    padding-left: 20px;
+}
+.Last-7-Days:hover{
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+}
+.LastMonth{
+    padding-top: 4px;
+    padding-left: 20px;
+}
+.LastMonth:hover{
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+
+}
+.ThisYear{
+    padding-top: 4px;
+    padding-right: 20px;
+}
+.ThisYear:hover{
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+} */ 

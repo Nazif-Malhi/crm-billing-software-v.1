@@ -1,0 +1,29 @@
+.dasboard{
+  /* background-color: #EFEFEF; */
+   /* position: absolute;  */
+  margin-top: 10px;
+}
+
+.topHeader{
+  display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-gap: 10px; */
+    
+}
+
+
+.dasboard .bottomFooter .upper {
+  width: 98%;
+}
+
+.dasboard .bottomFooter .seprator{
+  height: 80px;
+}
+
+
+.dasboard .bottomFooter .yearlyrep {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
