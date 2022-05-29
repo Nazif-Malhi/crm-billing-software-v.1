@@ -90,15 +90,10 @@ const SideNavbarMenue = ({item}) => {
             <div className="subnav_Div" >
             { subnav && item.subNav.map((item, index) => {
                 return(
-                    
-                   
-                        
                      <DropDownLink to={item.path} key={index}>
                         {item.icon}
                         <SidebarSubLabel>{item.title}</SidebarSubLabel>
                     </DropDownLink>
-                    
-                   
                 )
             })}
             </div>
