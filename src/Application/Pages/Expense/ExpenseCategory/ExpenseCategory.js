@@ -3,6 +3,8 @@ import Stack from '@mui/material/Stack';
 import ButtonR from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import InputAdornment from '@mui/material/InputAdornment';
+
 
 
 import  TextField  from '@mui/material/TextField';
@@ -20,47 +22,6 @@ import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import FormControl from '@mui/material/FormControl';
 
-
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
-
-// Data will be come through Map.Array => () to use in Select Box
-
-const names = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
-];
-
-function getStyles(name, personName, theme) {
-  return {
-    fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-  };
-}
-
-
-// This is for uploading image's
-function handleImage() {
-  console.log("Image")
-}
 
 function handleFile(){
   console.log("File")
@@ -108,7 +69,7 @@ const ExpenseCategory = () => {
       aria-labelledby="example-modal-sizes-title-lg"
       >
         <Modal.Header closeButton style={{backgroundColor : '#F7F7F7'}}>
-          <Modal.Title>Add Category</Modal.Title>
+          <Modal.Title>Add Expense Category</Modal.Title>
         </Modal.Header>
         <Modal.Body className='show-grid'>
         <p><i style={{color:'red'}}>The field marked with * are required input fields.</i></p>
@@ -116,13 +77,28 @@ const ExpenseCategory = () => {
           
             <Row>
               <Col xs={10} md={6}>
-                <h6>Name*</h6>
-                <TextField id="outlined-basic" label="Type Category Name ..." variant="outlined" />
+              <h6>Code *</h6>
+                <TextField id ="outlined-basics" label= "Product Code" variant='outlined' size='small'
+                  InputProps={{
+                    
+                    style :{
+                      paddingRight: '0px',
+                      width:270
+                    },
+                    endAdornment: (
+                      <InputAdornment position="end" >
+                        <ButtonR  variant="contained"
+                          style = {{height: '38px', marginBottom:1}}>
+                            Generate
+                        </ButtonR>
+                      </InputAdornment>
+                    )
+                  }}
+                  />
               </Col>
               <Col xs = {8} md = {6}>
-                <h6>Image</h6>
-                
-                <input type="file" name='myfile' onChange={handleImage()} className = "customInput"/>
+                <h6>Name *</h6>
+                <TextField type='number' id="outlined-basic" label="Product Name" variant="outlined" size="small" style={{width:220}}/>
               </Col>
               </Row>
          </Container>
@@ -138,6 +114,8 @@ const ExpenseCategory = () => {
         </Modal.Footer>
       </Modal>
       </div>
+
+      {/* Import Modal File  */}
       <div className='import_Modal_div'>
       <Modal show={showImport} onHide={handleCloseIm}
       size="lg" 
