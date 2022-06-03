@@ -3,6 +3,7 @@ import './Category.css'
 import Stack from '@mui/material/Stack';
 import ButtonR from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import  TextField  from '@mui/material/TextField';
 import ImportExportIcon from '@mui/icons-material/ImportExport';
 import {Button , Modal, Container, Row, Col} from 'react-bootstrap';
@@ -56,14 +57,22 @@ function getStyles(name, personName, theme) {
 
 // This is for uploading image's
 function handleImage() {
-  console.log("yes")
+  console.log("Image")
+}
+
+function handleFile(){
+  console.log("File")
 }
 
 const Category = () => {
   const [show, setShow] = useState(false);
+  const [showImport, setShowImport] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCloseIm = () => setShowImport(false);
+  const handleShowIm = () => setShowImport(true);
 
 
   const theme = useTheme();
@@ -88,7 +97,7 @@ const Category = () => {
         <ButtonR variant="contained" startIcon={<AddIcon />} onClick = {handleShow}>
           Add Category's
         </ButtonR>
-        <ButtonR variant="contained" startIcon={<ImportExportIcon />}>
+        <ButtonR variant="contained" startIcon={<ImportExportIcon />} onClick = {handleShowIm}>
           Import
         </ButtonR>
       </Stack>
@@ -96,16 +105,16 @@ const Category = () => {
 
       {/* Modal Code */}
       
-      <div className='modal_div'>
+      <div className='addmodal_div'>
       <Modal show={show} onHide={handleClose}
       size="lg" 
       aria-labelledby="example-modal-sizes-title-lg"
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton style={{backgroundColor : '#F7F7F7'}}>
           <Modal.Title>Add Category</Modal.Title>
         </Modal.Header>
         <Modal.Body className='show-grid'>
-        <p><i>The field marked with * are required input fields.</i></p>
+        <p><i style={{color:'red'}}>The field marked with * are required input fields.</i></p>
         <Container>
           
             <Row>
@@ -122,7 +131,7 @@ const Category = () => {
               <Row>
                 <Col xs = {12} md = {12}>
                   <h6>Parent Category</h6>
-                  <FormControl sx={{ m: 1, width: 300 }}>
+                  <FormControl sx={{ width: 300 }}>
                     <InputLabel id="demo-multiple-chip-label" >Chip</InputLabel>
                         <Select
                           labelId="demo-multiple-chip-label"
@@ -162,6 +171,42 @@ const Category = () => {
             Close
           </Button>
           <Button variant="primary" onClick={handleClose}>
+            Submit
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </div>
+      <div className='import_Modal_div'>
+      <Modal show={showImport} onHide={handleCloseIm}
+      size="lg" 
+      aria-labelledby="example-modal-sizes-title-lg"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Import Category</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='show-grid'>
+        <p><i style={{color:'red'}}>The field marked with * are required input fields.</i></p>
+        <p>The correct column order is (name*, parent_category) and you must follow this.</p>
+        <Container>
+            <Row>
+              <Col xs={10} md={6}>
+                <h6>Upload CSV File*</h6>
+                <input type="file" name='myfile' onChange={handleFile()} className = "customInput"/>
+              </Col>
+              <Col xs = {8} md = {6}>
+                <h6>Sample File</h6>
+                <ButtonR variant="contained" startIcon={<FileDownloadIcon />} style = {{width:"100%" , marginTop: "5px"}}>
+                  File Download
+                </ButtonR>
+              </Col>
+              </Row>
+         </Container>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseIm}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleCloseIm}>
             Submit
           </Button>
         </Modal.Footer>

@@ -1,0 +1,12 @@
+.customInputForProduct {
+    border: 1px solid rgb(185, 185, 185);
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 2px;
+    padding-top: 4px;
+    width: 220px;
+}
+.topSpace{
+    padding-top: 20px;
+    padding-bottom: 2px;
+}

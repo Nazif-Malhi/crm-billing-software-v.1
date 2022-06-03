@@ -36,22 +36,22 @@ export const SidebarData = [
                 title: 'Product',
                 path: '/inventory/product',
                 icon: <MdIcons.MdProductionQuantityLimits/>
-            },
-            {
-                title: 'Adjustment',
-                path: '/inventory/adjustment',
-                icon: <HiIcons.HiAdjustments/>
-            },
-            {
-                title: 'Barcode',
-                path: '/inventory/barcode',
-                icon: <IoIcons.IoMdBarcode/>
-            },
-            {
-                title: 'Stock',
-                path: '/inventory/stock',
-                icon: <AiIcons.AiOutlineStock/>
             }
+            // {
+            //     title: 'Adjustment',
+            //     path: '/inventory/adjustment',
+            //     icon: <HiIcons.HiAdjustments/>
+            // },
+            // {
+            //     title: 'Barcode',
+            //     path: '/inventory/barcode',
+            //     icon: <IoIcons.IoMdBarcode/>
+            // },
+            // {
+            //     title: 'Stock',
+            //     path: '/inventory/stock',
+            //     icon: <AiIcons.AiOutlineStock/>
+            // }
         ]
     },
     {
