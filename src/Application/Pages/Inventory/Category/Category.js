@@ -17,6 +17,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import FormControl from '@mui/material/FormControl';
+import CategoryTable from "./CategoryTable";
+
 
 
 const ITEM_HEIGHT = 48;
@@ -212,6 +214,9 @@ const Category = () => {
         </Modal.Footer>
       </Modal>
       </div>
+      
+    <CategoryTable/>
+    
     </div>
     </>
   )
