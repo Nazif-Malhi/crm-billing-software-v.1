@@ -50,6 +50,7 @@ const DropDownLink = styled(Link)`
  height:30px;
  padding-top:1rem;
  padding-left:0.3rem;
+ padding-bottom:30px;
 display:flex;
 text-decoration:none;
 cursor:pointer;
@@ -87,10 +88,10 @@ const SideNavbarMenue = ({item}) => {
             : null}
                 </div>
             </SidebarLink>
-            <div className="subnav_Div" >
+            <div className="subnav_Div"  >
             { subnav && item.subNav.map((item, index) => {
                 return(
-                     <DropDownLink to={item.path} key={index}>
+                     <DropDownLink to={item.path} key={index} >
                         {item.icon}
                         <SidebarSubLabel>{item.title}</SidebarSubLabel>
                     </DropDownLink>

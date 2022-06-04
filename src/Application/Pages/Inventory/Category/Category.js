@@ -18,6 +18,7 @@ import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import FormControl from '@mui/material/FormControl';
 import CategoryTable from "./CategoryTable";
+import { padding } from '@mui/system';
 
 
 
@@ -93,8 +94,8 @@ const Category = () => {
 
 
   return(
-    <>
-    <div className='main_container'>
+    < >
+    <div className='main_container' style={{padding:50}}>
       <Stack spacing={2} direction="row">
         <ButtonR variant="contained" startIcon={<AddIcon />} onClick = {handleShow}>
           Add Category's
