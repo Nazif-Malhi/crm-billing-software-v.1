@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+
 function DropDown() {
   const [action, setAction] = React.useState('');
 
@@ -90,15 +91,15 @@ const rows = [
   const columns=["Parent Category","Category","Category Image","No of Product","Stock","Action"];
   
 
-
-export default function CustomizedTables() {
+   const CustomizedTables=React.forwardRef((props, ref) =>  {
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} ref={ref}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <CategoryTableHeader columns={columns} />
         <CategoryTableBody data={rows}/>
       </Table>
     </TableContainer>
   );
-}
+});
+export default CustomizedTables;
