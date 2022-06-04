@@ -54,7 +54,18 @@ function getStyles(name, personName, theme) {
   };
 }
 
+////
 
+
+function getStylesgffgfgffg(name, personName, theme) {
+  return {
+    fontWeight:
+      personName.indexOf(name) === -1
+        ? theme.typography.fontWeightRegular
+        : theme.typography.fontWeightMedium,
+  };
+}
+///
 // This is for uploading image's
 function handleImage() {
   console.log("Image")
