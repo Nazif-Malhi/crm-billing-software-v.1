@@ -17,6 +17,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import FormControl from '@mui/material/FormControl';
+import CategoryTable from "./CategoryTable";
+
 
 
 const ITEM_HEIGHT = 48;
@@ -54,18 +56,7 @@ function getStyles(name, personName, theme) {
   };
 }
 
-////
 
-
-function getStylesgffgfgffg(name, personName, theme) {
-  return {
-    fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-  };
-}
-///
 // This is for uploading image's
 function handleImage() {
   console.log("Image")
@@ -223,6 +214,9 @@ const Category = () => {
         </Modal.Footer>
       </Modal>
       </div>
+      
+    <CategoryTable/>
+    
     </div>
     </>
   )
