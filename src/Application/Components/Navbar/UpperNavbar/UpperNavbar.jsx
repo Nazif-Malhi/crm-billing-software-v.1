@@ -5,6 +5,9 @@ import {AiOutlineDown} from 'react-icons/ai'
 import {IoNotifications} from 'react-icons/io5'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { Button } from '@mui/material';
+import history from '../../../Others/history'
+import { Route } from 'react-router-dom'
+
 
 const styleOfIcon={fontSize: "1.2em"}
 const styleOfIconPos={fontSize: "1.2em", fontWeight:"bolder"}
@@ -16,8 +19,10 @@ const upperNavbar = () => {
                 
             </div>
             <div className="posSystem">
-            <Button variant='contained'>POS</Button>
+               
+                <Button variant='contained' onClick={() => history.push('/pos')}>POS</Button>
 
+           
                 {/* <HiOutlineShoppingBag style={styleOfIconPos}/>
                 <h5 onClick={<Pos/>}>POS</h5> */}
             </div>
@@ -34,5 +39,4 @@ const upperNavbar = () => {
       
     )
 }
-
 export default upperNavbar

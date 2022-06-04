@@ -15,6 +15,8 @@ import ExpenseCategory from "./Application/Pages/Expense/ExpenseCategory/Expense
 import AddQuotation from "./Application/Pages/Quotation/AddQuotation/AddQuotation";
 import QuotationList from "./Application/Pages/Quotation/QuotationList/QuotationList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Pos from "./Application/Pages/POS/Pos";
+import history from "./Application/Others/history";
 
 
 
@@ -32,7 +34,7 @@ function App() {
         <AppContainer/>
       </Router> */}
       
-        <Router>
+        <Router history = {history}>
         <CombineNavbar
             onCollapse={(inactive) => {
             console.log(inactive);
@@ -69,7 +71,9 @@ function App() {
           <Route path= {"/quotation/addquotation"} element = {<AddQuotation/>}/>
           <Route path= {"/quotation/quotationlist"} element = {<QuotationList/>}/>
 
-         
+          {/* Pos Route with the path of URL */}
+
+          <Route path={'/pos'} exact element = {<Pos/>}/>
 
         </Routes>
         </div>
