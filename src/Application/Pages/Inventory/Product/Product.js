@@ -108,7 +108,7 @@ const Result = () => {
 }
   
   return (
-    <>
+    <div style={{padding:50}}>
 
      <div className='main_container'>
        <Stack spacing={2} direction="row">
@@ -306,7 +306,7 @@ const Result = () => {
         </Modal.Footer>
       </Modal>
     </div>  
-    </>
+    </div>
   )
 }
 

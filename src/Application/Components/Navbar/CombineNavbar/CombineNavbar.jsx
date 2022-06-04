@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './CombineNavbar.css'
 import SideNavbar from '../SideNavbar/SideNavbar/SideNavbar'
 import UpperNavbar from '../UpperNavbar/UpperNavbar'
+import { Margin } from '@mui/icons-material'
 
 const CombineNavbar = (props) => {
       const [inactive, setInactive] = useState(false);
@@ -13,17 +14,18 @@ const CombineNavbar = (props) => {
     }, [inactivebacktoApp]);
     return (
         <div className="mainContainer_for_Navbars">
-                <div className="sideNavbar_div">
+                <div className="sideNavbar_div" >
                     <SideNavbar 
                           onCollapse={(inactive) => {
                               setInactivebacktoApp(inactive);
                             //  console.log(inactive);
                              setInactive(inactive);
                            }}
+                           
                     />
                 </div>
-                <div className="upperNavbar_div">
-                    { <UpperNavbar/> }
+                <div className="upperNavbar_div" >
+                    { <UpperNavbar /> }
                 </div>
         </div>
     )

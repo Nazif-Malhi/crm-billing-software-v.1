@@ -10,7 +10,7 @@ import DoughnetChart from '../../Components/Charts/DoughnetChart'
 const Dashboard = () => {
     return (
         <>
-        <div className="dasboard">
+        <div className="dasboard" style={{marginTop:50,marginBottom:50,marginRight:50,marginLeft:50}}>
             <div className="topHeader">
                 <div className="welcomecon">
                     <h2>Welcome</h2>

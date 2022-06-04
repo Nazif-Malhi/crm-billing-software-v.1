@@ -2,7 +2,7 @@
  
  const AddPurchase = () => {
    return (
-     <div>AddPurchase</div>
+     <div style={{padding:50}}>AddPurchase</div>
    )
  }
  
