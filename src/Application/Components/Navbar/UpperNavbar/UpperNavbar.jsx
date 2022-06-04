@@ -4,6 +4,7 @@ import {FaUserAlt} from 'react-icons/fa'
 import {AiOutlineDown} from 'react-icons/ai'
 import {IoNotifications} from 'react-icons/io5'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
+import { Button } from '@mui/material';
 
 const styleOfIcon={fontSize: "1.2em"}
 const styleOfIconPos={fontSize: "1.2em", fontWeight:"bolder"}
@@ -15,8 +16,10 @@ const upperNavbar = () => {
                 
             </div>
             <div className="posSystem">
-                <HiOutlineShoppingBag style={styleOfIconPos}/>
-                <h5>POS</h5>
+            <Button variant='contained'>POS</Button>
+
+                {/* <HiOutlineShoppingBag style={styleOfIconPos}/>
+                <h5 onClick={<Pos/>}>POS</h5> */}
             </div>
             <div className="notification_button">
                 <IoNotifications style={styleOfIcon}/>

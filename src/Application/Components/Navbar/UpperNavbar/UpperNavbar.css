@@ -36,13 +36,13 @@
     color: #1E90FF;
 }
 .posSystem{
-    width: 90px;
+    /* width: 90px;
     height: 25px;
     border: 2px solid;
     border-radius: 5px;
     border-color: #1E90FF;
     background-color: #1E90FF;
-    color: white;
+    color: white; */
     text-align: center;
     justify-content: space-around;
     display: inline-flex;
