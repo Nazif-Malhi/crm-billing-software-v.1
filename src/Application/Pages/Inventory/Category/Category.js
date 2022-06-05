@@ -18,7 +18,11 @@ import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import FormControl from '@mui/material/FormControl';
 import CategoryTable from "./CategoryTable";
+
 import { padding } from '@mui/system';
+///
+import { useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 
 
 
@@ -91,20 +95,32 @@ const Category = () => {
     );
   };
 
+//Print selection
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
 
 
   return(
     < >
     <div className='main_container' style={{padding:50}}>
-      <Stack spacing={2} direction="row" style={{paddingBottom:30}}>
+      <div  style={{paddingBottom:20,display:"flex",justifyContent:"space-between"}} >
+      <Stack spacing={2} direction="row">
         <ButtonR variant="contained" startIcon={<AddIcon />} onClick = {handleShow}>
           Add Category's
         </ButtonR>
         <ButtonR variant="contained" startIcon={<ImportExportIcon />} onClick = {handleShowIm}>
           Import
         </ButtonR>
+        
       </Stack>
-
+      <Stack spacing={2}>
+        <ButtonR variant="contained" onClick={handlePrint} >
+          Print
+        </ButtonR>
+      </Stack>
+      </div>
 
       {/* Modal Code */}
       
@@ -216,7 +232,7 @@ const Category = () => {
       </Modal>
       </div>
       
-    <CategoryTable/>
+    <CategoryTable ref={componentRef}/>
     
     </div>
     </>
