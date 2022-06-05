@@ -24,7 +24,6 @@ import history from "./Application/Others/history";
 
 function App() {
   const [inactive, setInactive] = useState(false);
-  const [activePos, setActivePos] = useState(false);
 
   return (
       
@@ -73,7 +72,7 @@ function App() {
 
           {/* Pos Route with the path of URL */}
 
-          <Route path={'/pos'} exact element = {<Pos/>}/>
+          <Route path={'/pos'} element = {<Pos/>}/>
 
         </Routes>
         </div>
