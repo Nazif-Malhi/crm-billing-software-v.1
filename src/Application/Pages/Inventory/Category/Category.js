@@ -96,7 +96,7 @@ const Category = () => {
   return(
     < >
     <div className='main_container' style={{padding:50}}>
-      <Stack spacing={2} direction="row">
+      <Stack spacing={2} direction="row" style={{paddingBottom:30}}>
         <ButtonR variant="contained" startIcon={<AddIcon />} onClick = {handleShow}>
           Add Category's
         </ButtonR>
