@@ -2,7 +2,7 @@ import React from 'react'
 
 const Stock = () => {
   return (
-    <div>Stock</div>
+    <div style={{padding:50}}>Stock</div>
   )
 }
 
