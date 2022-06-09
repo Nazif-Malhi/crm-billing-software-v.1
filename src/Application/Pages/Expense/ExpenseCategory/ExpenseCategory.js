@@ -4,24 +4,18 @@ import ButtonR from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import InputAdornment from '@mui/material/InputAdornment';
-
-
-
 import  TextField  from '@mui/material/TextField';
-
 import ImportExportIcon from '@mui/icons-material/ImportExport';
 import {Button , Modal, Container, Row, Col} from 'react-bootstrap';
-
-
 import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
-import Chip from '@mui/material/Chip';
-import FormControl from '@mui/material/FormControl';
-
+// import Box from '@mui/material/Box';
+// import OutlinedInput from '@mui/material/OutlinedInput';
+// import InputLabel from '@mui/material/InputLabel';
+// import MenuItem from '@mui/material/MenuItem';
+// import Select from '@mui/material/Select';
+// import Chip from '@mui/material/Chip';
+// import FormControl from '@mui/material/FormControl';
+import ExpenseTableWithSearch from "./ExpenseTableWithSearch";
 
 function handleFile(){
   console.log("File")
@@ -51,8 +45,8 @@ const ExpenseCategory = () => {
   };
 
   return (
-    <>
-    <div className='main_container'>
+    <div style={{paddingLeft:20,paddingRight:20}}>
+    <div className='main_container' >
       <Stack spacing={2} direction="row">
         <ButtonR variant="contained" startIcon={<AddIcon />} onClick = {handleShow}>
           Add Expense Category
@@ -153,7 +147,9 @@ const ExpenseCategory = () => {
       </Modal>
       </div>
       </div>
-    </>
+
+      <ExpenseTableWithSearch style={{width:500}}/>
+    </div>
   )
 }
 
