@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import  {useState} from 'react';
 import Stack from '@mui/material/Stack';
 import ButtonR from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
@@ -10,22 +10,15 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FormControl1 from '@mui/material/FormControl';
-import  FormGroup  from '@mui/material/FormGroup';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
-import IconButton from '@mui/material/IconButton'
 import InputAdornment from '@mui/material/InputAdornment';
-import Box from '@mui/material/Box';
 import { top100Films } from '../../../Data/Top100FilmsData';
 import Autocomplete from '@mui/material/Autocomplete';
 import Tooltip from '@mui/material/Tooltip';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import './Product.css'
-import { width } from '@mui/system';
-
-
-
-
-
+import * as React from 'react';
+import TableWithAction from './TableWithAction';
  
 function handleFile(){
   console.log("File")
@@ -106,7 +99,8 @@ const Result = () => {
   )
 
 }
-  
+
+
   return (
     <div style={{padding:50}}>
 
@@ -306,6 +300,9 @@ const Result = () => {
         </Modal.Footer>
       </Modal>
     </div>  
+    
+<TableWithAction/>
+    
     </div>
   )
 }

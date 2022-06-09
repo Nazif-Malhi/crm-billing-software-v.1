@@ -69,6 +69,7 @@ function App() {
           <Route path= {"/quotation/addquotation"} element = {<AddQuotation/>}/>
           <Route path= {"/quotation/quotationlist"} element = {<QuotationList/>}/>
 
+          {/* <Route path= {"/POS"} element = {<POS/>}/> */}
          
 
         </Routes>
